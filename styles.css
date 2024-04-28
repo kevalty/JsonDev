@@ -181,3 +181,38 @@ h2, h3, h4, h5, h6 {
     font-size: 18px;
     color: #333;
 }
+@media screen and (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas */
+    #indice {
+        width: 100%; /* Cambia el ancho del cuadro del índice para adaptarse a pantallas más pequeñas */
+        margin: 20px auto;
+    }
+
+    .content-item {
+        flex-direction: column; /* Cambia el diseño de los elementos a columnas en pantallas más pequeñas */
+    }
+
+    .content-item .content-left,
+    .content-item .content-right {
+        margin: 0; /* Elimina el margen para que las imágenes ocupen todo el ancho */
+    }
+
+    .content-item .content-left img,
+    .content-item .content-right img {
+        width: 100%; /* Hace que las imágenes ocupen todo el ancho disponible */
+    }
+}
+.content-left img,
+.content-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100px; /* Mantenemos el radio de borde redondeado si es necesario */
+    margin-left: 100px; /* Esto puede ajustarse según tu diseño */
+}
+
+@media screen and (max-width: 768px) {
+    .content-left img,
+    .content-right img {
+        margin-left: 0; /* Eliminamos el margen lateral en pantallas más pequeñas */
+    }
+}
