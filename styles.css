@@ -1,218 +1,193 @@
-
-/* styles.css */
-
-/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Estilos generales */
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-#indice {
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    width: 500px; /* Ancho del cuadro del índice */
-    margin: 20px;
-    margin-left: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-#indice ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#indice li {
-    margin-bottom: 5px;
-}
-
-#indice a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    display: block;
-    padding: 8px; /* Aumenta el espacio de relleno para hacerlo más visible */
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-}
-
-#indice a:hover {
-    background-color: #ddd;
-}
-.container {
-    margin: 0 auto;
-    padding: 20px;
+    font-size: 18px; /* Aumenta el tamaño de la letra */
 }
 
 header {
-    background-color: #76BFEB;
-    color: #fff;
-    padding: 20px 0;
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header-content {
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-}
-
-header .logo {
-    max-width: 100px;
-}
-
-h1 {
-    font-size: 2em;
-}
-
-main {
-    background-color: #7599EB;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px auto;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero {
+    height: 100vh;
+    background: url('/assets/minimalist_background_JSON.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    margin: 20px;
+}
+
+.floating-nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    z-index: 1;
+    transition: top 0.3s;
+}
+
+.floating-nav.hidden {
+    display: none;
+}
+
+.floating-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.floating-nav li {
+    margin-bottom: 10px;
+}
+
+.floating-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.floating-nav a:hover {
+    color: #28a745;
+}
+
+.content {
+    flex-grow: 1;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 260px; /* Updated margin to prevent overlap with floating nav */
+    text-align: justify; /* Justifica el texto */
 }
 
 .content-section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-.content-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.content-item .container {
-    display: flex;
-}
-
-.content-left,
-.content-right {
-    flex: 1;
-    text-align: justify;
-}
-
-.content-left img,
-.content-right img {
-    width: 70%;
-    height: 70%;
-    border-radius: 100px;
-    margin-left: 100px;
-}
-
-.content-left {
-    margin-right: 20px;
-    justify-content: center;
-}
-
-.content-right {
-    margin-left: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-h2, h3, h4, h5, h6 {
-    color: #fff; /* Cambiar el color de todos los títulos */
-}
-.content-section .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.content-section .content-item {
-    margin-top: 20px;
-    width: 100%;
-}
-
-.content-section .content-item .content-title h2 {
-    margin-bottom: 20px;
-}
-
-.content-section .content-item .content-image {
-    width: 50%;
-}
-
-.content-section .content-item .content-image img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-.content-section .content-item .content-equations {
-    width: 50%;
-    text-align: center; /* Centrar el texto */
-    padding-left: 20px;
-}
-
-.content-section .content-item .content-equations p {
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-
-.content-section .content-item .content-text {
-    margin-top: 20px;
-    width: 100%;
-    text-align: justify;
-}
-.content-section .content-item .content-image h3 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #333;
-}
-@media screen and (max-width: 768px) {
-    /* Estilos para pantallas más pequeñas */
-    #indice {
-        width: 100%; /* Cambia el ancho del cuadro del índice para adaptarse a pantallas más pequeñas */
-        margin: 20px auto;
-    }
-
-    .content-item {
-        flex-direction: column; /* Cambia el diseño de los elementos a columnas en pantallas más pequeñas */
-    }
-
-    .content-item .content-left,
-    .content-item .content-right {
-        margin: 0; /* Elimina el margen para que las imágenes ocupen todo el ancho */
-    }
-
-    .content-item .content-left img,
-    .content-item .content-right img {
-        width: 100%; /* Hace que las imágenes ocupen todo el ancho disponible */
-    }
-}
-.content-left img,
-.content-right img {
+.content-section img {
     max-width: 100%;
     height: auto;
-    border-radius: 100px; /* Mantenemos el radio de borde redondeado si es necesario */
-    margin-left: 100px; /* Esto puede ajustarse según tu diseño */
+    display: block;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 768px) {
-    .content-left img,
-    .content-right img {
-        margin-left: 0; /* Eliminamos el margen lateral en pantallas más pequeñas */
-    }
+.content-section img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background: #28a745;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-left: 65px;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+.equation {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #e6e6e6; /* Light gray background */
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc; /* Gray border */
+    display: block; /* Ensure it takes the whole line */
+    margin: 10px 0;
+    font-size: 1.2em; /* Increase font size */
+    text-align: center;
+}
+
+/* Modal styles for image zoom */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%; /* Increase the width to 90% */
+    max-width: 1200px; /* Increase max-width to 1200px */
+    margin-top: 100px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
